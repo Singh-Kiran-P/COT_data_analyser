@@ -235,7 +235,17 @@ def parse_cot_data(text):
 def download_data():
     url = "https://www.cftc.gov/dea/futures/"
 
-    data_ = ["ag_sf", "petroleum_sf", "nat_gas_sf", "electricity_sf", "other_sf"]
+    data_ = [
+        "ag_sf",
+        "petroleum_sf",
+        "nat_gas_sf",
+        "electricity_sf",
+        "other_sf",
+        "deacmesf",
+        "deanybtsf",
+        "deaifedsf",
+        "deanymesf",
+    ]
     data_txt = ""
     for metal in data_:
         response = requests.get(url + metal + ".htm")
